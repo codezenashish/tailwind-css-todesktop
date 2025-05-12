@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./output.css" />
+  <title>codezen-blog</title>
+  <style>
+    .gallery-item {
+      flex: 0 0 auto;
+      transition: transform 0.3s ease;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Nav bar -->
+  <nav class="flex items-center justify-between bg-white p-3"></nav>
+  <nav class="flex items-center justify-between bg-white p-3">
+    <a id="brand" class="flex items-center gap-2 text-lg font-bold" href="#"><img class="h-10 w-10"
+        src="/dist/assets/images/todesktop-logo.bn2Qe8sb.png" alt="" />
+      <span>toDesktop</span></a>
+    <!-- nav text -->
+    <div class="hidden gap-12 md:flex">
+      <a class="font-medium hover:text-sky-600" href="#">Price</a>
+      <a class="font-medium hover:text-sky-600" href="#">Docs</a>
+      <a class="font-medium hover:text-sky-600" href="#">Changelog</a>
+      <a class="font-medium hover:text-sky-600" href="#">Blog</a>
+      <a class="font-medium hover:text-sky-600" href="#">Login</a>
+    </div>
+    <!-- send btn -->
+    <button
+      class="group hidden cursor-pointer items-center gap-3 rounded-lg border border-gray-400 p-2 px-4 hover:border-gray-700 md:flex">
+      <img src="/dist/assets/images/electron-icon.E8mrXtZM.svg" alt="" />
+      <span>Enter Done</span>
+      <i class="fa-solid fa-arrow-right transition group-hover:translate-x-1"></i>
+    </button>
+    <!-- toggle btn -->
+    <button id="openBtn" class="p-2 text-lg md:hidden">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <!-- toggle menu -->
+    <div id="menuOpen" class="fixed inset-0 hidden bg-white/10 p-3 backdrop-blur-2xl md:hidden">
+      <div class="flex justify-between">
+        <a id="brand" class="flex items-center gap-2 text-lg font-bold" href="#"><img class="h-10 w-10"
+            src="/dist/assets/images/todesktop-logo.bn2Qe8sb.png" alt="" />
+          <span>toDesktop</span></a>
+        <!-- CLOSE BTN -->
+        <button id="closeBtn" class="p-2 text-lg md:hidden">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <!-- text -->
+
+      <div class="flex flex-col">
+        <a class="m-2 rounded-2xl p-3 font-medium hover:bg-blue-500 hover:text-white" href="#">Price</a>
+        <a class="m-2 rounded-2xl p-3 font-medium hover:bg-blue-500 hover:text-white" href="#">Docs</a>
+        <a class="m-2 rounded-2xl p-3 font-medium hover:bg-blue-500 hover:text-white" href="#">Changelog</a>
+        <a class="m-2 rounded-2xl p-3 font-medium hover:bg-blue-500 hover:text-white" href="#">Blog</a>
+        <a class="m-2 rounded-2xl p-3 font-medium hover:bg-blue-500 hover:text-white" href="#">Login</a>
+      </div>
+      <!-- border -->
+      <div class="h-[1px] bg-gray-900"></div>
+      <button
+        class="group mt-4 flex w-full items-center gap-3 rounded-lg border border-gray-400 p-3 px-4 hover:border-gray-700 hover:bg-gray-100">
+        <img src="/dist/assets/images/electron-icon.E8mrXtZM.svg" alt="" />
+        <span>Enter Done</span>
+        <i class="fa-solid fa-arrow-right transition group-hover:translate-x-1"></i>
+      </button>
+    </div>
+  </nav>
+  <!-- nav end  -->
+  <!-- hero section -->
+  <main>
+    <div class="mx-auto min-h-screen bg-gradient-to-br from-pink-50 via-orange-50 to-transparent">
+      <div class="mx-auto flex max-w-4xl flex-col px-6 pb-32">
+        <!-- version text -->
+        <div
+          class="group mt-4 flex w-fit items-center gap-2 rounded-lg border border-yellow-300 bg-amber-50 px-3 py-1 shadow-md transition hover:-translate-y-1 hover:shadow-lg sm:self-center">
+          <div class="h-2 w-2 rounded-full border border-yellow-600 bg-amber-400"></div>
+          <p class="text-base text-yellow-600">v0.27.0</p>
+          <i class="fa-solid fa-arrow-right text-yellow-700 transition group-hover:translate-x-1"></i>
+        </div>
+        <div class="mt-4 flex flex-col gap-8 sm:text-center">
+          <p class="hidden text-sm sm:block">
+            Code optional Drag & drop builder Windows, Mac, Linux
+          </p>
+          <h1 class="font-display text-5xl font-medium sm:text-center sm:text-7xl">
+            Web app to desktop app in minutes
+          </h1>
+          <p class="text-lg font-normal text-gray-700">
+            Take your web app codebase and transform it into a cross platform
+            desktop app with native functionality.
+          </p>
+          <!-- btn -->
+          <div class="flex w-full flex-col justify-center gap-4 sm:flex-row">
+            <button class="cursor-pointer rounded-lg bg-sky-600 px-3 py-2 text-white transition hover:bg-sky-700">
+              Download Now
+            </button>
+            <button class="cursor-pointer rounded-lg border border-gray-300 px-4 py-2 transition hover:border-gray-600">
+              Read Docs
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- brandng -->
+      <div class="flex flex-col gap-6">
+        <div class="flex justify-center gap-2.5">
+          <img class="translate-y-2" src="./assets/images/pointing-arrow.hZqSxAwL.svg" alt="" />
+          <span class="font-medium">Apps powered by ToDesktop</span>
+          <img class="translate-y-2 -scale-x-100" src="./assets/images/pointing-arrow.hZqSxAwL.svg" alt="" />
+        </div>
+      </div>
+      <!--  -->
+    </div>
+    </div>
+    <!--  -->
+    <div class="max-w-7xl mx-auto px-6 mt-16 lg:px-8 lg-mt-32  ">
+      <h1 class="font-medium md:font-semibold text-3xl md:text-5xl">How it works</h1>
+      <div class="px-8 py-12 rounded-xl border border-gray-300 mt-4 flex flex-col md:flex-row bg-gray-50 ">
+        <div class=" flex flex-col gap-5 ">
+          <span class="w-fit bg-amber-50 border border-yellow-300 rounded-lg px-3 py-1 text-yellow-900 font-medium">Step
+            1</span>
+          <h3 class="text-3xl font-medium md:text-4xl">Bootstrap straight from your web app</h3>
+          <p class="text-lg font-light">Copy and paste your web app url into ToDesktop. Customise your app design, app
+            icon and window frame UI with no code.</p>
+          <ul class="grid grid-cols-2 gap-4 md:w-1/2">
+            <li class="flex gap-4">
+              <i class="fa-solid fa-check"></i>
+              <a class="text-lg font-light border-b border-gray-300 hover:border-gray-600 " href="#">Multeple Window</a>
+            </li>
+            <li class="flex gap-4">
+              <i class="fa-solid fa-check"></i>
+              <a class="text-lg font-light border-b border-gray-300 hover:border-gray-600 " href="#">Multeple Window</a>
+            </li>
+            <li class="flex gap-4">
+              <i class="fa-solid fa-check"></i>
+              <a class="text-lg font-light border-b border-gray-300 hover:border-gray-600 " href="#">Multeple Window</a>
+            </li>
+            <li class="flex gap-4">
+              <i class="fa-solid fa-check"></i>
+              <a class="text-lg font-light border-b border-gray-300 hover:border-gray-600 " href="#">Multeple Window</a>
+            </li>
+            <li class="flex gap-4">
+              <i class="fa-solid fa-check"></i>
+              <a class="text-lg font-light border-b border-gray-300 hover:border-gray-600 " href="#">Multeple Window</a>
+            </li>
+            <li class="flex gap-4">
+              <i class="fa-solid fa-check"></i>
+              <a class="text-lg font-light border-b border-gray-300 hover:border-gray-600 " href="#">Multeple Window</a>
+            </li>
+          </ul>
+        </div>
+        <div class="mt-6">
+          <img class="max-h-[350px] max-w-[350px] object-contain" src="./assets/images/hy7.png" alt="">
+        </div>
+      </div>
+    </div>
+    <!--  -->
+    <div class="max-w-7xl mx-auto px-6 mt-16 lg:px-8 lg-mt-32  ">
+      <div class="px-8 py-12 rounded-xl border border-gray-300 mt-4 flex flex-col md:flex-row bg-gray-50 ">
+        <div class=" flex flex-col gap-5 ">
+          <span class="w-fit bg-amber-50 border border-yellow-300 rounded-lg px-3 py-1 text-yellow-900 font-medium">Step
+            2</span>
+          <h3 class="text-3xl font-medium md:text-4xl">Add desktop code to customise your web app</h3>
+          <p class="text-lg font-light">No need to create a new repository, just add code from our desktop APIs to your
+            codebase and get access to system level functionality.</p>
+          <ul class="grid grid-cols-2 gap-4 md:w-1/2">
+            <li class="flex gap-4">
+              <i class="fa-solid fa-check"></i>
+              <a class="text-lg font-light border-b border-gray-300 hover:border-gray-600 " href="#">Multeple Window</a>
+            </li>
+            <li class="flex gap-4">
+              <i class="fa-solid fa-check"></i>
+              <a class="text-lg font-light border-b border-gray-300 hover:border-gray-600 " href="#">Multeple Window</a>
+            </li>
+            <li class="flex gap-4">
+              <i class="fa-solid fa-check"></i>
+              <a class="text-lg font-light border-b border-gray-300 hover:border-gray-600 " href="#">Multeple Window</a>
+            </li>
+            <li class="flex gap-4">
+              <i class="fa-solid fa-check"></i>
+              <a class="text-lg font-light border-b border-gray-300 hover:border-gray-600 " href="#">Multeple Window</a>
+            </li>
+            <li class="flex gap-4">
+              <i class="fa-solid fa-check"></i>
+              <a class="text-lg font-light border-b border-gray-300 hover:border-gray-600 " href="#">Multeple Window</a>
+            </li>
+            <li class="flex gap-4">
+              <i class="fa-solid fa-check"></i>
+              <a class="text-lg font-light border-b border-gray-300 hover:border-gray-600 " href="#">Multeple Window</a>
+            </li>
+          </ul>
+        </div>
+        <div class="mt-6">
+          <img class="max-h-[300px] max-w-[300px] object-contain" src="./assets/images/12h.png" alt="">
+        </div>
+      </div>
+    </div>
+
+    <div class="h-[1000px]"></div>
+  </main>
+
+  <script src="./main.js" defer></script>
+</body>
+
+</html>
