@@ -33,7 +33,7 @@ This is a clone of the toDesktop created using **Tailwind CSS** and **JavaScript
 ## Installation
 
 ```bash
-git clone https://github.com/codezenashish/tailwind-css-todesktop.git.
+git clone https://github.com/codezenashish/tailwind-css-todesktop.git
 cd tailwind-css-todesktop
 ```
 Then open `index.html` in your browser or use a Live Server extension.
